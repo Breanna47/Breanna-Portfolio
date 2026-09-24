@@ -1,233 +1,603 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breanna Watson</title>
-    <link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/8b60ccf18e.js" crossorigin="anonymous">
-</script>
-<script src="index.js" defer></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY",
-      });
-   })();
-</script>
-</head>
-<body>
- <section id="landing-page" onmousemove="moveBackground(event)">
-    <nav>
-        <figure>
-            <img id="personal-logo" src="./assets/logo.svg" alt="">
-        </figure>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5efe8" />
+    <meta
+      name="description"
+      content="Breanna Watson is a frontend developer building responsive web applications with JavaScript, TypeScript, React and Next.js."
+    />
+
+    <title>Breanna Watson | Frontend Developer</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/8b60ccf18e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+       
+
+        <button
+          class="nav__menu-btn"
+          type="button"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
         <ul class="nav__link--list">
-            <li class="nav__link" onclick="toggleModal()"> 
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-                ">About</a>
-            </li>
-            <li class="nav__link"> 
-                <a href="#Projects" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-                ">Projects</a>
-            </li>
-            <li class="nav__link" onclick="toggleModal()"> 
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-                ">Contact</a>
-            </li>
-            <li class="nav__link click" onclick="toggleContrast()"> 
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-                "><i class="fa-solid fa-circle-half-stroke"></i></a>
-            </li>
-        </ul>    </nav>
-        <header class="header">
-            <div class="header__content">
-                <h1 class="title">Hey</h1>
-                <h1 class="title orange">I'm Breanna</h1>
-<p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> web developer based in Florida. <br>
-Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b></p>
-<p>
-    <div class="social__list">
-        <a href="http://www.linkedin.com/in/breannacwatson" class="social__link click">
-           <i class="fa-brands fa-linkedin"></i>
-        </a>
-          <a href="file:///C:/Users/feelu/OneDrive/Desktop/Employers/BreannaWatson_Resume2025.pdf" target="_blank" class="social__link click">
-<i class="fa-solid fa-file-pdf"></i>        </a>
-          <a href="https://github.com/dashboard" class="social__link click">
-           <i class="fa-brands fa-github"></i>
-        </a>
-    </div>
-</p>
+          <li class="nav__link">
+            <button
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              type="button"
+              onclick="
+                toggleModal();
+                closeMenu();
+              "
+            >
+              About
+            </button>
+          </li>
+
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclick="closeMenu()"
+            >
+              Projects
+            </a>
+          </li>
+
+          <li class="nav__link">
+            <button
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              type="button"
+              onclick="
+                toggleModal();
+                closeMenu();
+              "
+            >
+              Contact
+            </button>
+          </li>
+
+          <li class="nav__link">
+            <button
+              class="nav__link--anchor contrast__btn"
+              type="button"
+              onclick="toggleContrast()"
+              aria-label="Toggle light and dark theme"
+            >
+              <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <header class="header">
+        <div class="header__content">
+          <div class="header__text">
+            <h1 class="title">Hey</h1>
+            <h1 class="title orange">I'm Breanna</h1>
+
+            <p class="header__para">
+              I'm a
+              <strong class="orange">Frontend Developer</strong>
+              based in Florida, building responsive and user-focused web
+              applications.
+            </p>
+
+            <p class="header__para header__para--secondary">
+              I work with JavaScript, TypeScript, React and Next.js. Here's a
+              bit more
+              <button
+                class="inline__link orange"
+                type="button"
+                onclick="toggleModal()"
+              >
+                about me.
+              </button>
+            </p>
+
+            <div class="social__list">
+              <a
+                href="https://www.linkedin.com/in/breannacwatson"
+                class="social__link click"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a
+                href="./assets/BreannaWatson_SoftwareDeveloper_Resume.pdf"
+                class="social__link click"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Software Developer Resume"
+                title="Software Developer Resume"
+              >
+                <i class="fa-solid fa-file-pdf"></i>
+              </a>
+
+              <a
+                href="https://github.com/Breanna47"
+                class="social__link click"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="mailto:breanna.watson@yahoo.com"
+                class="social__link click"
+                aria-label="Email Breanna"
+                title="Email"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
             </div>
-        </div> </header>
-        <a href="#">
-        <button class="mail__btn click" onclick="toggleModal()">
-<i class="fa-solid fa-envelope"></i>
-            
-        </button></a>
-        <a href="#projects" class="scroll">
-          <div class="scroll__icon click"></div>
-        </a>
-    <div class="modal">
-        <div class="modal__half modal__about">
-        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>  
-    <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
-<p class="modal__para">I'm a 33 year old Floridian <b class= orange>frontend software engineer</b> witha  strong passion for developing websites with great <b class= orange>user experiences.</b> 
-    <br>I currently work on extremely difficult engineering problems and learn from a team consisting of some of the most <b class= orange>talented</b> and <b class= orange>experienced </b>software engineers every day.</p>
-<div class="modal__languages">
-    <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-     <figure class="modal__language">
-        <img class="modal__lanugage--img" src=""><i class="fa-brands fa-js"></i>
-<span class="language__name">HTML</span>
-    </figure>
-</div>
 
-    </div>
-        <div class="modal__half modal__contact">
-            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-           <h3 class="modal__title modal__contact"> 
-            Let's have a chat!</h3>
-            <h4 class="modal__sub-title modal__sub-title--contact">
-                I'm currently open to new opportunities.
-            </h4>
-            <form id="contact__form" onsubmit="contact(event)">
-                <div class="form__item">
-                    <label class="form__item--label" >Name</label>
-                    <input class="input" name="user_name" type="text" required></input>
-                </div>
-                 <div class="form__item">
-                    <label class="form__item--label" >E-mail</label>
-                    <input class="input" name="user_email" type="email" required></input>
-                 </div>
-                 <div class="form__item">
-                    <label class="form__item--label" >Message</label>
-                    <textarea class="input" name="message" type="text" required></textarea>
-                 </div>
-                 <button id="contact__submit" class="form__submit">
-                    Send it my way
-                </button>
-            </form>
-           <div class="modal__overlay modal__overlay--loading">
-            <i class="fas fa-spinner"></i>
-           </div>
- <div class="modal__overlay modal__overlay--success">Thanks for the message! Looking fwd tos epaking to you soon.
+            <div class="resume__links">
+              <a
+                href="./assets/BreannaWatson_SoftwareDeveloper_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resume__btn resume__btn--primary"
+              >
+                Software Developer Resume
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
 
- </div>
+              <a
+                href="./assets/BreannaWatson_HealthTechResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resume__btn resume__btn--secondary"
+              >
+                HealthTech Resume
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
 
-    </div>
-</div> 
-<img src="./assets/semi circle.svg" class="shape shape--0">
-<img src="./assets/circle.svg" class="shape shape--1">
-<img src="./assets/squiggly.svg" class="shape shape--2">
-<img src="./assets/circle.svg" class="shape shape--3">
-<img src="./assets/triangle.svg" class="shape shape--4">
-<img src="./assets/circle.svg" class="shape shape--5">
-<img src="./assets/squiggly.svg" class="shape shape--6">
-<img src="./assets/circle.svg" class="shape shape--7">
-<img src="./assets/semi circle.svg" class="shape shape--8">
-
- </section>  
- <section id="projects">
-    <div class="container">
-        <div class="row">
-            <h1 class="section__title">
-                Here are some of my <span class="orange">projects</span>
-            </h1>
-            <ul class="project__list">
-                <li class="project">
-<div class="project__wrapper">
-    <img src="./assets/blinker mockup.png" class="project__img"/>
-  <div class="project__wrapper--bg"></div>
-    <div class="project__description">
-        <h3 class="project__description--title">
-            Car Sales Project</h3>
-        <h4 class="project__description--sub-title">Html, CSS, Javascript, Vue, Vuex</h4>
-<p class="project__description--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi repellat aliquam, aut exercitationem temporibus consequuntur sit quidem ipsum cum incidunt iusto nemo architecto autem ratione minima ut eius obcaecati perferendis.</p> 
-<div class="project__description--links">
-    <a href="#" class="project__description--link">
-        <i class="fa-brands fa-github"></i></a>
-        <a href="#" class="project__description--link">
-        <i class="fas fa-link"></i></a>
-</div>    
-</div>
-</div>
-                </li>
-            </ul>
+          <figure class="header__portrait">
+            <img
+              src="./assets/profile.jpg"
+              alt="Professional portrait of Breanna Watson"
+            />
+          </figure>
         </div>
-    </div>
- </section> 
- <footer>
-    <div class="container">
+      </header>
+
+      <button
+        class="mail__btn click"
+        type="button"
+        onclick="toggleModal()"
+        aria-label="Open contact form"
+        title="Contact me"
+      >
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+
+      <a href="#projects" class="scroll" aria-label="Scroll to projects">
+        <div class="scroll__icon"></div>
+      </a>
+
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="About and contact Breanna"
+      >
+        <div class="modal__half modal__about">
+          <h2 class="modal__title">Here's a bit about me.</h2>
+
+          <h3 class="modal__sub-title">Frontend Developer</h3>
+
+          <p class="modal__para">
+            I'm a frontend developer with hands-on experience creating
+            responsive, API-driven applications using JavaScript, TypeScript,
+            React and Next.js.
+          </p>
+
+          <p class="modal__para">
+            My background also includes professional nursing and leadership
+            experience as a U.S. Army officer. I bring that same organization,
+            accountability and attention to detail to software development.
+          </p>
+
+          <h3 class="modal__skills-title">My technical skills</h3>
+
+          <div class="modal__languages">
+            <div class="modal__language">
+              <i class="fa-brands fa-html5"></i>
+              <span class="language__name">HTML5</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span class="language__name">CSS3</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-brands fa-js"></i>
+              <span class="language__name">JavaScript</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-brands fa-react"></i>
+              <span class="language__name">React</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-solid fa-code"></i>
+              <span class="language__name">TypeScript</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-solid fa-layer-group"></i>
+              <span class="language__name">Next.js</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-brands fa-git-alt"></i>
+              <span class="language__name">Git</span>
+            </div>
+
+            <div class="modal__language">
+              <i class="fa-brands fa-github"></i>
+              <span class="language__name">GitHub</span>
+            </div>
+          </div>
+
+          <a
+            href="./assets/BreannaWatson_SoftwareDeveloper_Resume.pdf"
+            class="modal__resume-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View my resume
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="modal__half modal__contact">
+          <button
+            class="modal__exit click"
+            type="button"
+            onclick="toggleModal()"
+            aria-label="Close modal"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <h2 class="modal__title">Let's have a chat!</h2>
+
+          <h3 class="modal__sub-title">
+            I'm currently open to remote software development opportunities.
+          </h3>
+
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label" for="user-name"> Name </label>
+
+              <input
+                id="user-name"
+                class="input"
+                name="user_name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form__item">
+              <label class="form__item--label" for="user-email"> Email </label>
+
+              <input
+                id="user-email"
+                class="input"
+                name="user_email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form__item">
+              <label class="form__item--label" for="user-message">
+                Message
+              </label>
+
+              <textarea
+                id="user-message"
+                class="input"
+                name="message"
+                required
+              ></textarea>
+            </div>
+
+            <button id="contact__submit" class="form__submit" type="submit">
+              Open Email
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="form__note">
+              This opens your email app with your message ready to send.
+            </p>
+          </form>
+
+          <a href="mailto:breanna.watson@yahoo.com" class="contact__email">
+            breanna.watson@yahoo.com
+          </a>
+        </div>
+      </div>
+
+      <img src="./assets/semi circle.svg" class="shape shape--0" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--1" alt="" />
+      <img src="./assets/squiggly.svg" class="shape shape--2" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--3" alt="" />
+      <img src="./assets/triangle.svg" class="shape shape--4" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--5" alt="" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--7" alt="" />
+      <img src="./assets/semi circle.svg" class="shape shape--8" alt="" />
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">
+            Here are some of my
+            <span class="orange">projects</span>
+          </h2>
+
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/skinstric.png"
+                  class="project__img"
+                  alt="Skinstric AI application"
+                  onerror="this.src = './assets/blinker mockup.png'"
+                />
+
+                <div class="project__wrapper--bg"></div>
+
+                <div class="project__description">
+                  <h3 class="project__description--title">Skinstric AI</h3>
+
+                  <h4 class="project__description--sub-title">
+                    Next.js, TypeScript, REST APIs
+                  </h4>
+
+                  <p class="project__description--para">
+                    An AI-focused image analysis application built from Figma
+                    designs. Features include image capture, upload workflows,
+                    API integration, validation and interactive demographic
+                    results.
+                  </p>
+
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Breanna47/skinstric"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Skinstric source code"
+                      title="GitHub"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a
+                      href="https://skinstric-azure.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Skinstric live demo"
+                      title="Live demo"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/movie-project.png"
+                  class="project__img"
+                  alt="React Movie Application"
+                  onerror="this.src = './assets/blinker mockup.png'"
+                />
+
+                <div class="project__wrapper--bg"></div>
+
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    React Movie Application
+                  </h3>
+
+                  <h4 class="project__description--sub-title">
+                    React, JavaScript, React Router, REST API
+                  </h4>
+
+                  <p class="project__description--para">
+                    A responsive movie search application featuring API-driven
+                    results, routed detail pages, loading states, poster
+                    fallbacks and mobile-friendly layouts.
+                  </p>
+
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Breanna47"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Find my React Movie project on GitHub"
+                      title="GitHub profile"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/nft-marketplace.png"
+                  class="project__img"
+                  alt="NFT Marketplace project"
+                  onerror="this.src = './assets/blinker mockup.png'"
+                />
+
+                <div class="project__wrapper--bg"></div>
+
+                <div class="project__description">
+                  <h3 class="project__description--title">NFT Marketplace</h3>
+
+                  <h4 class="project__description--sub-title">
+                    React, JavaScript, APIs, React Slick
+                  </h4>
+
+                  <p class="project__description--para">
+                    Built interactive NFT collection and new-item features using
+                    API-driven content, responsive carousels, loading skeletons
+                    and countdown timers.
+                  </p>
+
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Breanna47"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Find my NFT Marketplace project on GitHub"
+                      title="GitHub profile"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/netflix-project.png"
+                  class="project__img"
+                  alt="Netflix-inspired application"
+                  onerror="this.src = './assets/blinker mockup.png'"
+                />
+
+                <div class="project__wrapper--bg"></div>
+
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Netflix-Inspired Application
+                  </h3>
+
+                  <h4 class="project__description--sub-title">
+                    Next.js, React, TypeScript, APIs
+                  </h4>
+
+                  <p class="project__description--para">
+                    A movie-browsing application with external movie data,
+                    interactive details, favorites functionality and reusable
+                    frontend components.
+                  </p>
+
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Breanna47"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Find my Netflix-inspired project on GitHub"
+                      title="GitHub profile"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
         <div class="row footer__row">
-        <figure>
-        <img class="footer__logo__img" src="./assets/logo.svg"/>
-        </figure>
-        <div class="footer__social--list">
-            <a href="#" class="
-            footer__social--link
-            link__hover-effect
-            link__hover-effect--white
-            ">Github</a>
-            <a href="#" target="_blank" class="
-            footer__social--link
-            link__hover-effect
-            link__hover-effect--white
-            ">LinkedIn</a>
-            <a href="#" onclick="toggleModal()" class="
-            footer__social--link
-            link__hover-effect
-            link__hover-effect--white
-            ">Contact</a>
-            <a href="./assets/David Bragg Resume.pdf" target="_blank" class="
-            footer__social--link
-            link__hover-effect
-            link__hover-effect--white
-            ">Resume</a>
-               </div>
-                <div class="footer__copyright">Copyright © 2026 Breanna Watson</div>
-    </div></div>
- </footer>
-</body>
+          <a href="#landing-page" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>Back to Top</span>
+</a>
+            
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/Breanna47"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/breannacwatson"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="mailto:breanna.watson@yahoo.com"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Email
+            </a>
+
+            <a
+              href="./assets/BreannaWatson_SoftwareDeveloper_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Resume
+            </a>
+          </div>
+
+          <div class="footer__copyright">Copyright © 2026 Breanna Watson</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
