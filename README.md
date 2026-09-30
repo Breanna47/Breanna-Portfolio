@@ -1,25 +1,37 @@
-# Breanna Watson Portfolio: Original Layout Update
+# Breanna Watson | Frontend Developer Portfolio
 
-This is the original HTML/CSS/JavaScript portfolio structure updated with fuchsia, gray and camel tones, current profile details, and accessible mobile behavior. It retains the large Hey / I'm Breanna hero, moving decorative shapes, original two-panel modal, theme toggle, fixed email button, scroll control and original project-overlay interaction on desktop.
+[View Live Portfolio](https://breanna47.github.io/Breanna-Portfolio/)
 
-## Important: add your original decorative assets
+<img width="1593" height="758" alt="image" src="https://github.com/user-attachments/assets/385b249f-2074-4c9c-9a70-d2dad3162130" />
 
-Your original GitHub project includes decorative SVGs that were not included in the files shared here. Copy these files from your backed-up `New-Project-New-main/breanna_portfolio/assets` into this project's `assets` folder, preserving their names:
+My personal portfolio showcasing deployed frontend projects, technical skills, and downloadable resumes.
 
-- logo.svg
-- semi circle.svg
-- circle.svg
-- squiggly.svg
-- triangle.svg
+## Features
 
-The supplied profile.jpg and BreannaWatson_Resume.pdf are already in assets. Don't overwrite them when copying the original images. The decorative shapes and logo will appear as in the original once you've copied them.
+- Project showcase with screenshots and individual GitHub and live demo links.
+- Responsive layouts, light and dark themes, and interactive project overlays.
+- Resume downloads and contact options, including an email-based contact form.
 
-## Run
+## Tech Stack
 
-Open index.html in your browser or use Live Server in VS Code. Do not run npm install or npm run dev.
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
 
-## Working links
+## Featured Projects
 
-LinkedIn, GitHub profile, resume, email, and Skinstric live/GitHub links are included. The other project's buttons currently open your GitHub profile until their exact repository/live URLs have been confirmed. Add individual demo links after confirming them.
+- [Skinstric AI](https://skinstric-azure.vercel.app)
+- [React Movie App](https://react-movie-project-ecru.vercel.app)
+- [NFT Marketplace](https://breanna-internship.vercel.app)
+- [Netflix Clone](https://fl-netflix-psi.vercel.app)
 
-The contact form opens the visitor's installed email app, pre-addressed to breanna.watson@yahoo.com, with the message filled in. It does not silently transmit data; sending requires the visitor's email app.
+## Run Locally
+
+Open `index.html` in your browser, or open the project in VS Code and use Live Server.
+
+No dependency installation or build command is required.
+
+## Contact Form
+
+The contact form opens the visitor's email application with a prefilled message addressed to breanna.watson@yahoo.com. The visitor sends the message through their email application.
